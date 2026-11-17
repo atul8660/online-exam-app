@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta name="description" content="A focused, simple online examination experience." />
+    <title>Northstar — Online Exam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Northstar home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>northstar<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-right"><span class="secure-dot" aria-hidden="true"></span><span>Secure assessment</span></div>
+    </header>
+
+    <main id="app" class="page-shell" aria-live="polite">
+      <section class="welcome-view">
+        <div class="welcome-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> YOUR KNOWLEDGE, IN FOCUS</span>
+          <h1>A little focus<br />goes a <span>long way.</span></h1>
+          <p class="welcome-description">Take a moment, find your rhythm, and show what you know. Your assessment is ready when you are.</p>
+          <div class="trust-row">
+            <span class="avatar-stack" aria-hidden="true"><i>A</i><i>M</i><i>J</i></span>
+            <span>Built for a better test-taking experience</span>
+          </div>
+        </div>
+
+        <section class="exam-card" aria-labelledby="exam-title">
+          <div class="card-topline"><span class="exam-icon" aria-hidden="true">✳</span><span class="level-pill">GENERAL KNOWLEDGE</span></div>
+          <h2 id="exam-title">Knowledge check</h2>
+          <p class="card-description">A quick assessment to warm up your thinking.</p>
+          <div class="exam-meta">
+            <div><span class="meta-icon" aria-hidden="true">◷</span><span><strong>10 minutes</strong><small>Time limit</small></span></div>
+            <div><span class="meta-icon questions-icon" aria-hidden="true">▤</span><span><strong id="question-count">5 questions</strong><small>Multiple choice</small></span></div>
+          </div>
+          <div class="card-divider"></div>
+          <ul class="prep-list">
+            <li><span class="check-icon" aria-hidden="true">✓</span> You can move between questions</li>
+            <li><span class="check-icon" aria-hidden="true">✓</span> Review your answers before submitting</li>
+          </ul>
+          <button id="start-exam" class="primary-button" type="button">Begin assessment <span aria-hidden="true">→</span></button>
+          <p class="button-note">By continuing, you'll start the timer.</p>
+        </section>
+        <div class="welcome-footer"><span>✦ &nbsp; Take a breath. You've got this.</span><span>POWERED BY NORTHSTAR</span></div>
+      </section>
+
+      <section id="exam-view" class="exam-view" hidden></section>
+      <section id="result-view" class="result-view" hidden></section>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
