@@ -39,7 +39,7 @@ describe('Online Examination API', () => {
   test('GET / serves the examination app', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
-    expect(res.text).toContain('Knowledge check');
+    expect(res.text).toContain('<title>Online Exam</title>');
   });
 
   test('GET /api/health reports service status', async () => {
